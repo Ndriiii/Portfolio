@@ -265,7 +265,7 @@
 
                 <section id = "about" className = "min-h-screen relative z-10 flex flex-col md:flex-row items-center justify-center gap-12 px-10 py-20 bg-gradient-to-br from-[#0a0a0a] to-[#111111]">
                     <div data-aos = "fade-right" data-aos-duration = "800" className = "flex-1 order-2 md:order-1 text-left">
-                        <h2 className = "text-4xl font-bold text-white mb-6"> About Me </h2>
+                        <h2 className = "text-4xl font-bold text-white mb-6 text-center md:text-left"> About Me </h2>
                         <p className = "text-gray-300 text-xl mb-8 text-justify">
                             I’m an Information Systems student passionate about web development. I have hands-on experience 
                             with HTML, CSS, JavaScript, and PHP, including various frameworks. I enjoy building functional,
