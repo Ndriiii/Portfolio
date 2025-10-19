@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+html {
+    scroll-behavior: smooth;
+    scroll-margin-top: 100px;
+
+}
+
+@layer components {
+  .icon-size {
+    @apply xl:w-[140px] xl:h-[140px] md:w-[80px] md:h-[80px] lg:w-[95px] lg:h-[95px];
+  }
+}
