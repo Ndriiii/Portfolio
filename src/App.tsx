@@ -359,7 +359,6 @@
                                                             exit = {{ opacity: 0, scale: 0.95 }}
                                                             transition = {{ duration: 0.2, ease: "easeOut" }}
                                                             className = "w-[320px] sm:w-[450px] md:w-[600px] rounded-xl shadow-lg -mt-2"
-                                                            loading = "lazy"
                                                         />
                                                     </div>
                                                 </motion.div>
@@ -413,7 +412,6 @@
                                             src = { projects[selectedProject - 1].image }
                                             alt = {projects[selectedProject - 1].name}
                                             className = "w-full h-full rounded-2xl"
-                                            loading = "lazy"
                                         />
                                         ) : (
                                             <p className = "text-gray-400 text-lg italic"> Select a project to preview </p>
