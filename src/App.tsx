@@ -294,28 +294,32 @@
                     </div> 
                 </section>
 
-                <section id = "projects" data-aos = "fade-down" className = "relative z-10 flex flex-col md:flex-row items-center justify-center gap-12 px-10 py-20 bg-gradient-to-br from-[#0a0a0a] to-[#111111]"> 
+                <section id = "projects" data-aos = "fade-down" className = "relative z-10 flex flex-col md:flex-row items-center justify-center gap-12 px-10 py-20 bg-gradient-to-br from-[#0a0a0a] to-[#111111] overflow-hidden"> 
                     <motion.div
-                        className = "absolute inset-0 rounded-3xl border-[4px] blur-[2px] pointer-events-none"
-                        animate = {{
-                            borderColor: [
-                                "#a855f7",
-                                "#ec4899",
-                                "#f43f5e",
-                                "#22c55e",
-                                "#84cc16",
-                                "#eab308",
-                                "#3b82f6",
-                                ],
-                            }}
-                            transition = {{ duration: 10, repeat: Infinity, ease: "linear" }}
+                        className = "absolute inset-0 rounded-3xl p-[2px] pointer-events-none"
                             style = {{
-                                padding: "4px",
                                 mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
                                 WebkitMaskComposite: "xor",
                                 maskComposite: "exclude"
                             }}
-                    />
+                    >
+                        <motion.div
+                            className = "absolute inset-0 rounded-3xl blur-[2px]"
+                            animate = {{
+                                background: [
+                                    "linear-gradient(90deg, #a855f7, #ec4899)",
+                                    "linear-gradient(90deg, #f43f5e, #22c55e)",
+                                    "linear-gradient(90deg, #84cc16, #eab308)",
+                                    "linear-gradient(90deg, #3b82f6, #a855f7)",
+                                ],
+                            }}
+                            transition = {{ duration: 10, repeat: Infinity, ease: "linear" }}
+                            style = {{ 
+                                willChange: "background",
+                                transform: "translateZ(0)"
+                            }}
+                        />
+                    </motion.div>
                     <div className = "flex-1">
                         <h2 className = "text-3xl font-bold text-white mb-8 lg:text-left lg:text-4xl text-center"> My Projects </h2>
                         <div className = "space-y-6">
