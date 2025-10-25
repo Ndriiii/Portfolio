@@ -59,7 +59,9 @@
         }, []);
 
         useEffect(() => {
-            AOS.init();
+            AOS.init({
+                once: true,
+            });
         }, []);
 
 
@@ -206,7 +208,7 @@
 
                 <section className = "relative z-10 min-h-screen flex flex-col items-center justify-center text-center">
                     <motion.div
-                        className = "absolute left-[-200px] top-1/2 w-[550px] h-[550px] rounded-full blur-3xl opacity-50 mix-blend-screen"
+                        className = "absolute left-[-200px] top-1/2 w-[550px] h-[550px] rounded-full md:blur-3xl blur-xl opacity-50 mix-blend-screen"
                             animate = {{
                                 background: [
                                     "linear-gradient(to right, #3b82f6, #06b6d4, #22d3ee)",
@@ -216,9 +218,10 @@
                                 ],
                             }}
                         transition = {{ duration: 15, repeat: Infinity, ease: "linear" }}
+                        style = {{ willChange: "background", transform: "translateZ(0)", backfaceVisibility: "hidden" }}
                     />
                     <motion.div
-                        className = "absolute right-[-200px] top-0 -translate-y-1/2 w-[550px] h-[550px] rounded-full blur-3xl opacity-50 mix-blend-screen"
+                        className = "absolute right-[-200px] top-0 -translate-y-1/2 w-[550px] h-[550px] rounded-full md:blur-3xl blur-xl opacity-50 mix-blend-screen"
                             animate = {{
                                 background: [
                                     "linear-gradient(to right, #a855f7, #ec4899, #f43f5e)",
@@ -228,6 +231,7 @@
                                 ],
                             }}
                         transition = {{ duration: 15, repeat: Infinity, ease: "linear", delay: 5 }}
+                        style = {{ willChange: "background", transform: "translateZ(0)", backfaceVisibility: "hidden" }}
                     />
                     <h1 className = "text-4xl sm:text-5xl font-bold text-gray-400 leading-tight"> Welcome to my Portfolio, </h1>
                     <h2 className = "text-4xl sm:text-5xl font-bold mt-2 text-white"> I’m Andri </h2>
@@ -314,10 +318,7 @@
                                 ],
                             }}
                             transition = {{ duration: 10, repeat: Infinity, ease: "linear" }}
-                            style = {{ 
-                                willChange: "background",
-                                transform: "translateZ(0)"
-                            }}
+                            style = {{ willChange: "background", transform: "translateZ(0)", backfaceVisibility: "hidden" }}
                         />
                     </motion.div>
                     <div className = "flex-1">
